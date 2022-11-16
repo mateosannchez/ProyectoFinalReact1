@@ -11,7 +11,7 @@ const GameScreen = ({ handleResult }) => {
 
   return (
     <View style={styles.container}>
-      <Text>La suposicion del oponente</Text>
+      <Text>Suposicion </Text>
       <Text>{currentGuess}</Text>
       <Card newStyles={styles.buttonContainer}>
         <Button

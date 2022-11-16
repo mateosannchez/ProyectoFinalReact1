@@ -7,6 +7,7 @@ import StartGameScreen from "./Screen/StartGameScreen";
 import ResultScreen from "./Screen/ResultScreen";
 import Modal from "./Componentes/Modal";
 import Colores from './Constantes/Colores';
+import background from "./assets/Img/hombreantor.jpg";
 
 
 export default function App() {
@@ -94,14 +95,14 @@ export default function App() {
 
   return (
     <View style={styles.container}>
-      {/* <Header
+      <Header
         title={"Adivina el numero"}
         newStyles={{ fontFamily: "" }}
       />
-      {content} */}
+      {content}
 
       
-      <View style={styles.inputcontainer}>
+      {/* <View style={styles.inputcontainer}>
         <TextInput
           placeholder="new item"
           placeholderTextColor="white"
@@ -121,7 +122,7 @@ export default function App() {
           style={styles.listado}
         />
       </View>
-      <Modal isVisible={modalVisible} actionDeleteItem={deleteItem} />
+      <Modal isVisible={modalVisible} actionDeleteItem={deleteItem} /> */}
     </View>
   );
 }
@@ -129,7 +130,8 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: Colores.primary,
+    //backgroundImage: `url(${background})`,
     alignItems: 'center',
     justifyContent: 'center',
   },

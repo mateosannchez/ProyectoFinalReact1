@@ -13,7 +13,7 @@ import {
   } from "react-native";
   import React, { useState } from "react";
   import Card from "../Componentes/Card";
-  import colors from "../Constantes/Colores";
+  import Colores from "../Constantes/Colores";
   import Input from "../Componentes/Input";
   
   const width = Dimensions.get("window").width;
@@ -77,6 +77,7 @@ import {
                   <Text>Tu numero</Text>
                   <Text>{selectedNumber}</Text>
                   <Button
+                    style={{color: "#FF0017"}}
                     title="Empezar juego"
                     onPress={() => onStartGame(selectedNumber)}
                   />
@@ -104,7 +105,7 @@ import {
       justifyContent: "space-between",
     },
     cleanButton: {
-      backgroundColor: colors.secondary,
+      backgroundColor: Colores.secondary,
       height: 35,
       width: "40%",
       justifyContent: "center",
@@ -112,7 +113,7 @@ import {
       borderRadius: 10,
     },
     confirmButton: {
-      backgroundColor: colors.primary,
+      backgroundColor: Colores.primary,
       width: "40%",
     },
   });
