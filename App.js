@@ -3,18 +3,17 @@ import { StyleSheet, Text, View, TextInput, TouchableOpacity, FlatList } from 'r
 import Header from "./Componentes/Header";
 import GameScreen from "./Screen/GameScreen";
 import StartGameScreen from "./Screen/StartGameScreen";
-//import { useFonts } from "expo-font";
+import { useFonts } from "expo-font";
 import ResultScreen from "./Screen/ResultScreen";
 import Modal from "./Componentes/Modal";
 import Colores from './Constantes/Colores';
-import background from "./assets/Img/hombreantor.jpg";
-
+import ShopNavegacion from './Src/navegacion/ShopNavegacion';
 
 export default function App() {
 
-  // const [loaded] = useFonts({
-  //   RubikBubbles: require("./assets/fonts/RubikBubbles-Regular.ttf"),
-  // });
+  const [loaded] = useFonts({
+    WorkSans: require("./Src/assets/Fonts/WorkSans-Black.ttf"),
+  });
 
   //juego
   const [userNumber, setUserNumber] = useState();
@@ -93,38 +92,7 @@ export default function App() {
   );
   //shop
 
-  return (
-    <View style={styles.container}>
-      <Header
-        title={"Adivina el numero"}
-        newStyles={{ fontFamily: "" }}
-      />
-      {content}
-
-      
-      {/* <View style={styles.inputcontainer}>
-        <TextInput
-          placeholder="new item"
-          placeholderTextColor="white"
-          style={styles.inputStyle}
-          value={textItem}
-          onChangeText={onHandleChange}
-        />
-        <TouchableOpacity style={styles.button} onPress={addItem}>
-          <Text> Agregar </Text>
-        </TouchableOpacity>
-      </View>
-      <View>
-        <FlatList
-          data={list}
-          renderItem={renderItem}
-          keyExtractor={(item) => item.id}
-          style={styles.listado}
-        />
-      </View>
-      <Modal isVisible={modalVisible} actionDeleteItem={deleteItem} /> */}
-    </View>
-  );
+  return <ShopNavegacion/>;
 }
 
 const styles = StyleSheet.create({
