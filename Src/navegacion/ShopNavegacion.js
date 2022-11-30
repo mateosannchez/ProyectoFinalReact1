@@ -3,17 +3,32 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import MoldeCategorias from "../Screen/MoldeCategorias";
 import MoldeDetalles from "../Screen/MoldeDetalles";
 import CategoriasScreen from "../Screen/CategoriasScreen";
+import Colores from "../../Constantes/Colores";
+
 
 const stack = createNativeStackNavigator();
 
 export default shopNavegacion = () => {
-    return(
-        <NavigationContainer>
-            <stack.Navigator>
-                <stack.Screen name=" Mejores jugadores por décadas"  component={CategoriasScreen}/>
-                <stack.Screen name="Mejores de los '80" component={MoldeDetalles}/>
-                <stack.Screen name="Molde" component={MoldeCategorias}/>
+    return (
+        
+            <stack.Navigator initialRouteName="Mejores jugadores por décadas" screenOptions={{
+                headerStyle: { backgroundColor: Colores.gray },
+                headerTitleAlign: "center",
+                headerTintColor: Colores.white,
+                headerTitleStyle: {
+                    fontWeight: "bold"
+                },
+            }}>
+                <stack.Screen name=" Mejores jugadores por décadas" component={CategoriasScreen} options={{
+                    title: "Mejores jugadores por décadas"
+                }} />
+                <stack.Screen name="Mejores de los '80" component={MoldeDetalles} options={({ route }) => ({
+                    title: route.params.name,
+                })} />
+                <stack.Screen name="Molde" component={MoldeCategorias} options={({ route }) => ({
+                    title: route.params.name,
+                })} />
             </stack.Navigator>
-        </NavigationContainer>
+        
     )
 }

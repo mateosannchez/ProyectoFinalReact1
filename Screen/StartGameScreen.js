@@ -12,7 +12,7 @@ import {
     ScrollView,
   } from "react-native";
   import React, { useState } from "react";
-  import Card from "../Componentes/Card";
+  //import Card from "../Componentes/Card";
   import Colores from "../Constantes/Colores";
   import Input from "../Componentes/Input";
   

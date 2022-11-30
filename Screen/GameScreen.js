@@ -1,6 +1,6 @@
 import { Button, StyleSheet, Text, View } from "react-native";
 import React, { useEffect, useState } from "react";
-import Card from "../Componentes/Card";
+
 
 const GameScreen = ({ handleResult }) => {
   const [currentGuess, setCurrentGuess] = useState();

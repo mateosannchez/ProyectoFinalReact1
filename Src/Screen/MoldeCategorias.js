@@ -1,24 +1,41 @@
-import { View, Text, StyleSheet, Button } from 'react-native'
+import { View, Text, StyleSheet, Button, FlatList, ImageBackground } from 'react-native'
 import React from 'react';
 import Colores from '../../Constantes/Colores';
+import BreadItem from "../Componentes/BreadItem";
+import { MOLDE } from "../Data/Molde";
+import img from '../../assets/Img/nazario.jpg'
 
-const MoldeCategorias = ({ navegacion }) => {
+const MoldeCategorias = ({ navegacion, route }) => {
+
+  const moldes = MOLDE.filter(
+    (molde) => molde.categoria === route.params.categoriaID
+  );
+
+  const handleSelectedCategory = (item) => {
+    navegacion.navigate("Mejores de los '80", {
+      productID: item.id,
+      name: item.nombre,
+    });
+  };
+
+  const renderBreadItem = ({ item }) => (
+    <BreadItem item={item} onSelected={handleSelectedCategory} />
+  );
+
   return (
-    <View style={styles.container}>
-      <Text>MoldeCategorias</Text>
-      <Button title='Detalles' onPress={() => navegacion.navigate("Molde")}/>
-    </View>
+    <ImageBackground source={img} resizeMode="cover" style={{ height: "100%" }}>
+
+      <FlatList
+        data={moldes}
+        keyExtractor={(item) => item.id}
+        renderItem={renderBreadItem}
+      />
+    </ImageBackground>
   )
 }
 
 export default MoldeCategorias
 
 const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        backgroundColor: Colores.secondary,
-        alignItems: "center",
-        justifyContent: "center",
 
-    }
 })
