@@ -11,12 +11,7 @@ import CartItem from "../Componentes/CartItem";
 
 const CartScreen = () => {
   const items = CART;
-  const total = 120;
-
-  const handleConfirmCart = () => {
-    console.log("Confirmar carrito");
-  };
-
+  
   const handleDeleteItem = () => {
     console.log("Eliminar item");
   };
@@ -34,15 +29,9 @@ const CartScreen = () => {
           renderItem={renderItem}
         />
       </View>
-      <View style={styles.footer}>
-        <TouchableOpacity style={styles.confirm}>
-          <Text>Confirmar</Text>
-          <View style={styles.total}>
-            <Text style={styles.text}>Total</Text>
-            <Text style={styles.text}>{total}</Text>
-          </View>
-        </TouchableOpacity>
-      </View>
+      {/* <View style={styles.footer}>
+       
+      </View> */}
     </View>
   );
 };

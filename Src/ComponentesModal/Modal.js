@@ -7,7 +7,7 @@ import {
     Modal as NewModal,
 } from "react-native";
 import React from "react";
-import Colores from "../Constantes/Colores";
+import Colores from "../../Constantes/Colores";
 
 const Modal = (props) => {
     const { isVisible, actionDeleteItem } = props;

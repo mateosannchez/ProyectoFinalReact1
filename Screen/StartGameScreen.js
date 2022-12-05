@@ -14,7 +14,7 @@ import {
   import React, { useState } from "react";
   //import Card from "../Componentes/Card";
   import Colores from "../Constantes/Colores";
-  import Input from "../Componentes/Input";
+  import Input from "../Src/ComponentesModal/Input";
   
   const width = Dimensions.get("window").width;
   const height = Dimensions.get("window").height;

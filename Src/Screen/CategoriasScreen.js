@@ -1,6 +1,5 @@
 import { View, Text, StyleSheet, Button, Image, ImageBackground, FlatList } from 'react-native'
 import React from 'react'
-import Colores from '../../Constantes/Colores'
 import { useNavigation } from '@react-navigation/native';
 import { CATEGORIAS } from "../Data/Categorias";
 import GridItem from "../Componentes/GridItem";

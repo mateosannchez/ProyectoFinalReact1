@@ -1,6 +1,5 @@
 import { View, Text, StyleSheet, Button, FlatList, ImageBackground } from 'react-native'
 import React from 'react';
-import Colores from '../../Constantes/Colores';
 import BreadItem from "../Componentes/BreadItem";
 import { MOLDE } from "../Data/Molde";
 import img from '../../assets/Img/nazario.jpg'

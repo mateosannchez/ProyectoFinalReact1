@@ -1,7 +1,8 @@
 import React from "react";
 import { StyleSheet, Text, View, TouchableOpacity, ImageBackground } from "react-native";
-import img from '../../assets/Img/diego2.jpg'
-import Colores from "../../Constantes/Colores";
+import img from '../../assets/Img/delpiero.jpg'
+// import Colores from "../../Constantes/Colores";
+
 
 const GridItem = ({ item, onSelected }) => {
   return (
@@ -48,13 +49,17 @@ const styles = StyleSheet.create({
     padding: 8,
   },
   titulo: {
-    backgroundColor: Colores.white,
-    width: 330,
-    //height: 30,
-    flexDirection: "row",
+    backgroundColor: "white",
+    width: 310,
+    height: 25,
+    flexDirection: "column",
     justifyContent: "center",
     alignItems: "center",
-
+    fontSize: 17,
+    fontWeight: "bold",
+    margin: 10,
+    borderRadius: 10,
+  
   },
   backCover: {
     position: 'absolute',
