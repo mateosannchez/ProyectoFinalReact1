@@ -2,8 +2,8 @@ import { useState } from 'react';
 import { StyleSheet, Text, View, TextInput, TouchableOpacity, FlatList } from 'react-native';
 import { useFonts } from "expo-font";
 import BotonTabNav from './Src/navegacion/BotonTabNav';
-
-
+import { Provider } from 'react-redux';
+import Store from './Src/Store';
 
 export default function App() {
 
@@ -15,7 +15,12 @@ export default function App() {
   //   return null;
   // }
 
-  return <BotonTabNav/>;
+  return (
+    <Provider store={Store}>
+
+      <BotonTabNav/>
+    </Provider>
+    ) 
 }
 
 const styles = StyleSheet.create({
