@@ -1,8 +1,8 @@
-import { BREADS } from "../../Data/Molde";
+import { MOLDE } from "../../Data/Molde";
 import { SELECTED_BREAD, FILTERED_BREAD } from "../Acciones/Bread.action";
 
 const initialState = {
-  breads: BREADS,
+  breads: MOLDE,
   filteredBread: [],
   selected: null,
 };
@@ -18,7 +18,7 @@ const MoldeReducer = (state = initialState, action) => {
       return {
         ...state,
         filteredBread: state.breads.filter(
-          (bread) => bread.category === action.categoryID
+          (bread) => bread.categoria === action.categoriaID
         ),
       };
     default:

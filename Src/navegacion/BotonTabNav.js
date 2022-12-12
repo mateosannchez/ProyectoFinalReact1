@@ -41,6 +41,19 @@ export default BotonTabNav = () => {
               </View>
             ),
           }}
+          
+        />
+        <BottomTabs.Screen
+          name="OrdersTab"
+          component={OrderNavigator}
+          options={{
+            tabBarIcon: ({ focus }) => (
+              <View style={styles.item}>
+                <Ionicons name="list" size={20} color="black" />
+                <Text>Ordenes</Text>
+              </View>
+            ),
+          }}
         />
       </BottomTabs.Navigator>
     </NavigationContainer>

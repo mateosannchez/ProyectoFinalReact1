@@ -3,7 +3,7 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import MoldeCategorias from "../Screen/MoldeCategorias";
 import MoldeDetalles from "../Screen/MoldeDetalles";
 import CategoriasScreen from "../Screen/CategoriasScreen";
-// import Colores from "../../Constantes/Colores";
+import Colores from "../../Constantes/Colores";
 
 
 const stack = createNativeStackNavigator();

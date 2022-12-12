@@ -8,12 +8,20 @@ import {
 } from "react-native";
 import { CART } from "../Data/Cart";
 import CartItem from "../Componentes/CartItem";
+import { useSelector, useDispatch } from "react-redux";
+import { removeItem } from "../Store/Acciones/Cart.action";
 
 const CartScreen = () => {
-  const items = CART;
-  
-  const handleDeleteItem = () => {
-    console.log("Eliminar item");
+  const dispatch = useDispatch();
+  const items = useSelector((state) => state.card.items);
+  const total = useSelector((state) => state.cart.total);
+
+  const handleConfirmCart = () => {
+    dispatch(confirmCart(items, total));
+  };
+
+  const handleDeleteItem = (id) => {
+    dispatch(removeItem(id));
   };
 
   const renderItem = ({ item }) => (
@@ -29,9 +37,15 @@ const CartScreen = () => {
           renderItem={renderItem}
         />
       </View>
-      {/* <View style={styles.footer}>
-       
-      </View> */}
+      <View style={styles.footer}>
+        <TouchableOpacity style={styles.confirm} onPress={handleConfirmCart}>
+          <Text>Confirmar</Text>
+          <View style={styles.total}>
+            <Text style={styles.text}>Total</Text>
+            <Text style={styles.text}>{total}</Text>
+          </View>
+        </TouchableOpacity>
+      </View>
     </View>
   );
 };
