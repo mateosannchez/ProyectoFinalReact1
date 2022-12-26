@@ -51,8 +51,8 @@ import {
      
     const [formState, dispatchFormState] = useReducer(formReducer, {
       inputValues: {
-        email: "hola",
-        password: "chau",
+        email: "",
+        password: "",
       },
       inputValidities: {
         email: false,
@@ -73,7 +73,7 @@ import {
           isValid: inputValidity,
           input: inputIdentifier,
         });
-        console.log(email, password);
+        // console.log(email, password);
       },
       [dispatchFormState]
     );
@@ -91,14 +91,13 @@ import {
               id="email"
               label="Email"
               keyboardType="email-address"
+              placeholder="Email"
               required
               email
               autoCapitalize="none"
               errorText="Por favor ingrese un email valido"
               onInputChange={onInputChangeHandler}
               name='email'
-              // value={valueInput.email}
-              // initialValue=""
               style={{fontWeight: "bold", borderWidth: 1, borderRadius: 10,}}
             />
   
@@ -114,29 +113,21 @@ import {
               autoCapitalize="none"
               errorText="Por favor ingrese una contraseña"
               onInputChange={onInputChangeHandler}
-              name='password'
-              // value={valueInput.password}
-              //onChangeText={setPassword}
-              // initialValue=""
+              name='contraseña'
+              
             />
           </View>
           <View style={styles.footer}>
             <View style={styles.button}>
               <Button
                 //title={isSingUp ? "REGISTRARME" : "LOGIN"}
-                title="Test"
+                title="Ingresar"
                 color={Colores.gray}
                 onPress={handleSignUp}
+                style={{borderRadius: 50}}
               />
             </View>
-            <View>
-              {/* <Button
-                //title={`Cambiar a ${!isSingUp ? "Registrame" : "Login"}`}
-                title="Test"
-                color={Colores.primary}
-                //onPress={() => setIsSingUp((prevState) => !prevState)}
-              /> */}
-            </View>
+           
           </View>
         </View>
       </KeyboardAvoidingView>
@@ -156,27 +147,34 @@ import {
       fontSize: 24,
       marginBottom: 18,
       fontWeight: "bold",
+      
     },
     container: {
       width: "80%",
       maxWidth: 400,
       backgroundColor: Colores.white,
       borderRadius: 10,
-      height: "50%",
+      height: "45%",
       maxHeight: 400,
       padding: 12,
     },
     footer: {
-      marginTop: 42,
+      marginTop: 62,
     },
     button: {
       marginBottom: 8,
-    },
-    input: {
-      height: 40,
-      margin: 12,
-      borderWidth: 1,
-      padding: 10,
       borderRadius: 10,
     },
+    input: {
+      // height: 40,
+      // margin: 22,
+      // borderWidth: 1,
+      // padding: 10,
+      // borderRadius: 10,
+      fontWeight: "bold", 
+      borderWidth: 1, 
+      borderRadius: 10, 
+      marginTop: 15,
+    },
   });
+

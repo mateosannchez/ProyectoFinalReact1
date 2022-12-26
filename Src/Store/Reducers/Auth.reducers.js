@@ -1,22 +1,22 @@
 import { SIGNUP } from "../Acciones/Auth.action";
 
+
 const initialState = {
-    token: null,
-    userId: null,
+  token: null,
+  userId: null,
 };
 
 const AuthReducer = (state = initialState, action) => {
-    switch (action.type) {
-        case SIGNUP:
-            return{
-                ...state,
-                token: action.token,
-                userId: action.userId,
-            };
-            default:
-                return state;
-    
-    }
+  switch (action.type) {
+    case SIGNUP:
+      return {
+        ...state,
+        token: action.token,
+        userId: action.userId,
+      };
+    default:
+      return state;
+  }
 };
 
 export default AuthReducer;

@@ -3,6 +3,8 @@ import { Button, ScrollView, StyleSheet, Text, TextInput, View } from "react-nat
 import { useDispatch } from "react-redux";
 import Colores from "../../Constantes/Colores";
 import ImageSelector from "../Componentes/ImageSelector";
+import addPlace from "../Store/Acciones/Places.action"
+
 
 const NewPlaceScreen = ({ navigation }) => {
     const dispatch = useDispatch();
@@ -47,5 +49,9 @@ const styles = StyleSheet.create({
         borderBottomColor: Colores.secondary,
         borderBottomWidth: 1,
         marginBottom: 16,
+        paddingHorizontal: 2,
+        paddingVertical: 4,
     }
 })
+
+export default NewPlaceScreen;
