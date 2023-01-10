@@ -5,7 +5,17 @@ import { Provider } from 'react-redux';
 import Store from './src/Store';
 import MainNavegacion from "./src/navegacion"
 
+import init from "./src/db/Index"
+
+init()
+  .then(() => console.log("Database initialized"))
+  .catch((err) => {
+    console.log("Data base fail connect");
+    console.log(err.message);
+  });
+  
 export default function App() {
+
 
   const [loaded] = useFonts({
     WorkSans: require("./src/assets/Fonts/WorkSans-Black.ttf"),
@@ -18,11 +28,11 @@ export default function App() {
   return (
     <Provider store={Store}>
 
-      <MainNavegacion/>
+      <MainNavegacion />
     </Provider>
-    ) 
+  )
 }
 
 const styles = StyleSheet.create({
- 
+
 });

@@ -1,10 +1,14 @@
 {
   "expo": {
-    "name": "AppClon",
-    "slug": "AppClon",
+    "name": "Jugadores",
+    "slug": "Jugadores",
     "version": "1.0.0",
+    "platforms": [
+      "ios",
+      "android"
+    ],
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
+    "icon": "./assets/iicon.png",
     "userInterfaceStyle": "light",
     "splash": {
       "image": "./assets/splash.png",
@@ -12,22 +16,39 @@
       "backgroundColor": "#ffffff"
     },
     "updates": {
-      "fallbackToCacheTimeout": 0
+      "fallbackToCacheTimeout": 0,
+      "url": "https://u.expo.dev/47fa901f-4428-4e44-89c8-9bed829264a6"
     },
     "assetBundlePatterns": [
       "**/*"
     ],
     "ios": {
+      "bundleIdentifier": "com.jugadores.places",
+      "biuldNumber": "1.0.0",
       "supportsTablet": true
     },
     "android": {
+      "package": "com.jugadores.places",
+      "versionCode": 1,
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#FFFFFF"
       }
     },
+    "permissions": [
+      "CAMERA",
+      "WRITE_EXTERNAL_STORAGE"
+    ],
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "47fa901f-4428-4e44-89c8-9bed829264a6"
+      }
+    },
+    "runtimeVersion": {
+      "policy": "sdkVersion"
     }
   }
 }
